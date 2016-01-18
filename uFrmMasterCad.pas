@@ -13,7 +13,6 @@ uses
 
 type
   TFrmMasterCad = class(TForm)
-    lblTitulo: TLabel;
     pnlPesquisas: TPanel;
     pnlResultados: TPanel;
     gridResultados: TDBGrid;
@@ -31,16 +30,15 @@ type
     actExcluir: TAction;
     actEdit: TAction;
     pnlTop: TPanel;
-    btnFechar: TSpeedButton;
     qryMaster: TFDQuery;
     dsMaster: TDataSource;
     FDWaitCursor: TFDGUIxWaitCursor;
+    lblTitulo: TLabel;
     procedure actNovoExecute(Sender: TObject);
     procedure actExcluirExecute(Sender: TObject);
     procedure actGravarExecute(Sender: TObject);
     procedure actCancelarExecute(Sender: TObject);
     procedure actEditExecute(Sender: TObject);
-    procedure btnFecharClick(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure qryMasterAfterEdit(DataSet: TDataSet);
   private
@@ -54,10 +52,6 @@ var
 
 
 implementation
-
-uses
-  uFrmMenu,uDmLogin;
-
 {$R *.dfm}
 
 procedure TFrmMasterCad.actCancelarExecute(Sender: TObject);
@@ -103,18 +97,6 @@ begin
   btnGravar.Enabled   :=  True;
   btnNovo.Enabled     :=  False;
   btnExcluir.enabled  :=  false;
-end;
-
-procedure TFrmMasterCad.btnFecharClick(Sender: TObject);
-begin
-  if pnlTop.Color = clSkyBlue then
-  begin
-    FrmMenu.fechaForm(self,FrmMenu.cbbFormsPessoas);
-  end
-  else
-  begin
-    FrmMenu.fechaForm(self,FrmMenu.cbbFormsFinanceiro);
-  end;
 end;
 
 procedure TFrmMasterCad.FormKeyPress(Sender: TObject; var Key: Char);

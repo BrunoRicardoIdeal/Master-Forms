@@ -6,12 +6,12 @@ object frmMasterPesquisa: TfrmMasterPesquisa
   Margins.Right = 1
   Margins.Bottom = 1
   BorderIcons = [biSystemMenu]
-  BorderStyle = bsNone
+  BorderStyle = bsDialog
   BorderWidth = 3
   Caption = 'Pesquisa'
-  ClientHeight = 716
-  ClientWidth = 817
-  Color = clBtnFace
+  ClientHeight = 688
+  ClientWidth = 811
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -26,52 +26,23 @@ object frmMasterPesquisa: TfrmMasterPesquisa
   TextHeight = 13
   object pnlFundo: TPanel
     Left = 0
-    Top = 0
-    Width = 817
-    Height = 716
+    Top = 45
+    Width = 811
+    Height = 643
     Align = alClient
     TabOrder = 0
-    object pnlTitulo: TPanel
-      Left = 1
-      Top = 1
-      Width = 815
-      Height = 37
-      Align = alTop
-      Color = clSkyBlue
-      ParentBackground = False
-      TabOrder = 0
-      object lblTitulo: TLabel
-        Left = 352
-        Top = 8
-        Width = 84
-        Height = 23
-        Caption = 'Pesquisa'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -19
-        Font.Name = 'Tahoma'
-        Font.Style = [fsBold]
-        ParentFont = False
-      end
-      object btnFechar: TButton
-        Left = 739
-        Top = 1
-        Width = 75
-        Height = 35
-        Action = acCancelar
-        Align = alRight
-        Caption = 'Fechar'
-        TabOrder = 0
-        TabStop = False
-      end
-    end
+    ExplicitTop = 0
+    ExplicitWidth = 817
+    ExplicitHeight = 716
     object pnlPesquisa: TPanel
       Left = 1
-      Top = 38
-      Width = 815
+      Top = 1
+      Width = 809
       Height = 75
       Align = alTop
-      TabOrder = 1
+      TabOrder = 0
+      ExplicitLeft = 2
+      ExplicitTop = -5
       object lblPesquisa: TLabel
         Left = 0
         Top = 6
@@ -98,14 +69,14 @@ object frmMasterPesquisa: TfrmMasterPesquisa
     end
     object grdPesquisa: TDBGrid
       Left = 1
-      Top = 113
-      Width = 815
+      Top = 76
+      Width = 809
       Height = 478
       Align = alTop
       DataSource = dsPesquisa
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
       ReadOnly = True
-      TabOrder = 2
+      TabOrder = 1
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -11
@@ -115,33 +86,67 @@ object frmMasterPesquisa: TfrmMasterPesquisa
     end
     object pnlBotoes: TPanel
       Left = 1
-      Top = 679
-      Width = 815
+      Top = 606
+      Width = 809
       Height = 36
       Align = alBottom
-      TabOrder = 3
+      TabOrder = 2
+      ExplicitTop = 679
+      ExplicitWidth = 815
       object btnCancelar: TButton
-        Left = 739
+        Left = 733
         Top = 1
         Width = 75
         Height = 34
         Action = acCancelar
         Align = alRight
         TabOrder = 0
+        ExplicitLeft = 739
       end
       object btnConfirmar: TButton
-        Left = 664
+        Left = 658
         Top = 1
         Width = 75
         Height = 34
         Action = acConfirmar
         Align = alRight
         TabOrder = 1
+        ExplicitLeft = 664
       end
     end
   end
+  object pnlTop: TPanel
+    Left = 0
+    Top = 0
+    Width = 811
+    Height = 45
+    Align = alTop
+    BevelKind = bkTile
+    BorderStyle = bsSingle
+    Color = clWindow
+    ParentBackground = False
+    TabOrder = 1
+    ExplicitLeft = 8
+    ExplicitTop = 8
+    ExplicitWidth = 797
+    object lblTitulo: TLabel
+      Left = 1
+      Top = 1
+      Width = 801
+      Height = 35
+      Align = alClient
+      Caption = 'T'#237'tulo'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -27
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitWidth = 78
+      ExplicitHeight = 33
+    end
+  end
   object qryPesquisa: TFDQuery
-    Connection = dmLogin.SqlConn
     Left = 592
     Top = 48
   end
@@ -151,8 +156,8 @@ object frmMasterPesquisa: TfrmMasterPesquisa
     Top = 48
   end
   object acList: TActionList
-    Left = 504
-    Top = 56
+    Left = 528
+    Top = 40
     object acCancelar: TAction
       Caption = 'Cancelar'
       OnExecute = acCancelarExecute

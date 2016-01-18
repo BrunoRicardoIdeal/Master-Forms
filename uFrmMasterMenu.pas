@@ -5,18 +5,17 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
-  Vcl.Imaging.jpeg;
+  Vcl.Imaging.jpeg, Vcl.ComCtrls;
 
 type
   TFrmMasterMenu = class(TForm)
-    pnlPessoas: TPanel;
-    pnlFinan: TPanel;
-    imgLogo: TImage;
-    imgNome: TImage;
-    pnlTopo: TPanel;
-    cbbFormsPessoas: TComboBox;
+    pnlEsquerda: TPanel;
     imgFundo: TImage;
-    cbbFormsFinanceiro: TComboBox;
+    pnlDireita: TPanel;
+    TreeViewRotinas: TTreeView;
+    lblArvRot: TLabel;
+    edtCodRotina: TEdit;
+    Label1: TLabel;
     procedure FormShow(Sender: TObject);
     procedure MostraForm(formulario : TForm; cbTelas : tComboBox);
     procedure FechaForm(formulario : TForm;cbTelas : TComboBox);

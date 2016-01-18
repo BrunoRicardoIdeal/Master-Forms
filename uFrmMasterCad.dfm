@@ -4,9 +4,10 @@ object FrmMasterCad: TFrmMasterCad
   AlphaBlend = True
   AlphaBlendValue = 50
   BorderStyle = bsNone
+  Caption = 'Rise Tecnologia'
   ClientHeight = 555
-  ClientWidth = 797
-  Color = clBtnFace
+  ClientWidth = 791
+  Color = clWindow
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -23,11 +24,13 @@ object FrmMasterCad: TFrmMasterCad
   TextHeight = 13
   object pnlPesquisas: TPanel
     Left = 0
-    Top = 35
-    Width = 797
-    Height = 82
+    Top = 45
+    Width = 791
+    Height = 86
     Align = alTop
     TabOrder = 0
+    ExplicitTop = 35
+    ExplicitWidth = 797
     object lblPesquisar: TLabel
       Left = 1
       Top = 0
@@ -38,16 +41,18 @@ object FrmMasterCad: TFrmMasterCad
   end
   object pnlResultados: TPanel
     Left = 0
-    Top = 117
-    Width = 797
-    Height = 88
+    Top = 131
+    Width = 791
+    Height = 128
     Align = alTop
     TabOrder = 1
+    ExplicitTop = 121
+    ExplicitWidth = 797
     object gridResultados: TDBGrid
       Left = 1
       Top = 1
-      Width = 795
-      Height = 86
+      Width = 789
+      Height = 126
       Align = alClient
       DataSource = dsMaster
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -62,10 +67,13 @@ object FrmMasterCad: TFrmMasterCad
   object pnlBotoes: TPanel
     Left = 0
     Top = 514
-    Width = 797
+    Width = 791
     Height = 41
     Align = alBottom
     TabOrder = 2
+    ExplicitLeft = 1
+    ExplicitTop = 520
+    ExplicitWidth = 797
     object btnNovo: TButton
       Left = 1
       Top = 1
@@ -113,49 +121,42 @@ object FrmMasterCad: TFrmMasterCad
   end
   object pnlDados: TPanel
     Left = 0
-    Top = 205
-    Width = 797
-    Height = 309
+    Top = 259
+    Width = 791
+    Height = 255
     Align = alClient
     TabOrder = 3
+    ExplicitLeft = 8
+    ExplicitTop = 254
+    ExplicitWidth = 797
   end
   object pnlTop: TPanel
     Left = 0
     Top = 0
-    Width = 797
-    Height = 35
+    Width = 791
+    Height = 45
     Align = alTop
-    Color = clSkyBlue
+    BevelKind = bkTile
+    BorderStyle = bsSingle
+    Color = clWindow
     ParentBackground = False
     TabOrder = 4
+    ExplicitWidth = 797
     object lblTitulo: TLabel
       Left = 1
       Top = 1
-      Width = 727
-      Height = 33
+      Width = 781
+      Height = 35
       Align = alClient
-      Alignment = taCenter
-      Caption = 'Cadastro de ...'
-      Color = clGray
+      Caption = 'T'#237'tulo'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -21
+      Font.Height = -27
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
-      ParentColor = False
       ParentFont = False
-      ExplicitWidth = 153
-      ExplicitHeight = 25
-    end
-    object btnFechar: TSpeedButton
-      Left = 728
-      Top = 1
-      Width = 68
-      Height = 33
-      Align = alRight
-      Caption = 'Fechar'
-      OnClick = btnFecharClick
-      ExplicitLeft = 712
+      ExplicitWidth = 272
+      ExplicitHeight = 33
     end
   end
   object ActBase: TActionList
@@ -188,18 +189,17 @@ object FrmMasterCad: TFrmMasterCad
   end
   object qryMaster: TFDQuery
     AfterEdit = qryMasterAfterEdit
-    Connection = dmLogin.SqlConn
-    Left = 304
-    Top = 59
+    Left = 632
+    Top = 171
   end
   object dsMaster: TDataSource
     DataSet = qryMaster
-    Left = 392
-    Top = 67
+    Left = 672
+    Top = 51
   end
   object FDWaitCursor: TFDGUIxWaitCursor
     Provider = 'Forms'
-    Left = 488
-    Top = 101
+    Left = 672
+    Top = 109
   end
 end

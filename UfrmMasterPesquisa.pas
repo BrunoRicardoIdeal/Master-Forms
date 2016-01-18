@@ -8,16 +8,13 @@ uses
   Vcl.DBGrids, Data.DB, Datasnap.Provider, Datasnap.DBClient, Data.SqlExpr,
   FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
-  FireDAC.Stan.Async, FireDAC.DApt, Vcl.StdCtrls, Vcl.ExtCtrls,uDmLogin,
+  FireDAC.Stan.Async, FireDAC.DApt, Vcl.StdCtrls, Vcl.ExtCtrls ,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client, System.Actions, Vcl.ActnList;
 
 type
 	TfrmMasterPesquisa = class(TForm)
     qryPesquisa: TFDQuery;
     pnlFundo: TPanel;
-    pnlTitulo: TPanel;
-    lblTitulo: TLabel;
-    btnFechar: TButton;
     pnlPesquisa: TPanel;
     lblPesquisa: TLabel;
     grdPesquisa: TDBGrid;
@@ -32,6 +29,8 @@ type
     btnLimpar: TButton;
     acLimpar: TAction;
     acPesquisar: TAction;
+    pnlTop: TPanel;
+    lblTitulo: TLabel;
     procedure acCancelarExecute(Sender: TObject);
     procedure acConfirmarExecute(Sender: TObject);
     procedure acAtribuirValoresRetornoExecute(Sender: TObject);
